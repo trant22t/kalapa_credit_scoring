@@ -4,9 +4,9 @@ types found in `src/find_optimal_model_type.py` (XGBoost and LightGBM - whose pa
 and a range of values for the number of neighbors `k` (a parameter used in SMOTE oversampling technique).
 
 Result:
-- LightGBM (cv) performs better than XGBoost (cv) for all values of k.
-- Within each model type, k doesn't affect the model performance too much, although the higher the k, the better
-the model's AUC. Again, the model improvement by k is very small.
+- LightGBM (cv) performs better than XGBoost (cv) for all values of `k`.
+- Within each model type, `k` doesn't affect the model performance too much, although the higher the `k`, the better
+the model's AUC. Again, the model improvement by `k` is very small.
 """
 
 from sklearn.preprocessing import StandardScaler
