@@ -52,7 +52,7 @@ Our imputation approach to deal with missing data is as follows:
     - The best strategy selected is to model each feature with missing values as a function of other features in a round-robin
     fashion using an extra-trees regressor. 
 
-### Reduction
+#### Reduction
 Since data is collected from multiple sources, which may lead to redundant and inconsistent information, in order to 
 have a condensed representation of the data set which is smaller in volume, while maintaining the integrity of original, 
 we take the following steps:
@@ -62,12 +62,12 @@ we take the following steps:
 - Drop raw attributes whose information has been encoded in other newly created attributes during feature engineering process
 - Drop meta attributes such as id, longitudes, latitudes, etc. and attributes with cryptic meanings and more than 10k levels.
 
-### Transformation
+#### Transformation
 To ensure that our attributes are in appropriate forms for modeling, we: 
 - Dummy encode all remaining categorical attributes
 - Expand date attributes (yyyy-mm-dd) into separate year and month columns. 
 
-### Feature selection
+#### Feature selection
 After all aforementioned processes, we end up with 616 columns, to select a subset of relevant features for use in model 
 construction, we employ two-sample Kolmogorov-Smirnov Test (K-S Test). This test is used to determine whether the distribution
 of a feature is the same across two samples (i.e. positively-labeled samples and negatively-labeled samples). Features with 
