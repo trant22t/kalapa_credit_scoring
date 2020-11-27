@@ -38,7 +38,7 @@ fundamental steps to process and clean data.
 #### Integration
 - Feature engineering: create new attributes based on the given set of attributes (e.g.: age, gender, location, 
 differences between dates, etc.)
-- Concept hierarchy generation for categorical data: values for categorical attributes are generalized to higher-oder 
+- Concept hierarchy generation for categorical data: values for categorical attributes are generalized to higher-order 
 concepts (e.g.: job category)
 
 #### Cleaning
@@ -79,7 +79,7 @@ keep features whose p-values are smaller than 0.001, which results to a set of 1
 #### Classifiers, Hyperparameter Tuning, and Oversampling Techniques
 The main model is formulated as a binary classification problem, in which the target variable can take the value of either 
 0 (good) or 1 (bad). We experiment with random forest, XGBoost, Light GBM and multilayer perceptron. For all model types, we
-both use the Python built-in default parameters and search through their customized grid spaces for the optimal hyperparameters. 
+both use the Python built-in default parameters and search through customized grid spaces for optimal hyperparameters. 
 LightGBM with cross-validated hyperparameters achieves the best performance, followed by XGBoost.
 
 We also attempt to find the best combination of model type and oversampling strategy to address the unbalanced data issue.
